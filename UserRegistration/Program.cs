@@ -13,6 +13,7 @@ namespace UserRegistration
             Console.WriteLine("WElcome to User Registration Program using Regex\n");
 
             UserReg.ValidateFirstName();
+            UserReg.ValidateLastName();
 
             Console.ReadLine();
         }
