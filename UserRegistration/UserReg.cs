@@ -43,7 +43,7 @@ namespace UserRegistration
             else
             {
                 Console.WriteLine("Last Name is not Valid");
-                ValidateFirstName();
+                ValidateLastName();
             }
         }
     }
