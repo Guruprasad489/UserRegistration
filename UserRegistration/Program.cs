@@ -10,7 +10,9 @@ namespace UserRegistration
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("WElcome to User Registration Program using Regex");
+            Console.WriteLine("WElcome to User Registration Program using Regex\n");
+
+            UserReg.ValidateFirstName();
 
             Console.ReadLine();
         }
