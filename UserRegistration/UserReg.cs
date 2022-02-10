@@ -9,9 +9,10 @@ namespace UserRegistration
 {
     public class UserReg
     {
+        //UC1
         public static void ValidateFirstName()
         {
-            Console.WriteLine("Please Enter your First Name:");
+            Console.WriteLine("\nPlease Enter your First Name:");
             Console.WriteLine("Note: First name starts with Cap and has minimun 3 characters");
             string firstName = Console.ReadLine();
             string firstName_pattern = "^[A-Z][aA-zZ]{2,}$";
