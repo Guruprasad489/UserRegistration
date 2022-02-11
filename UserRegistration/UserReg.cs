@@ -71,10 +71,10 @@ namespace UserRegistration
         {
             Console.WriteLine("\nPlease Enter your Mobie Number:");
             Console.WriteLine("Note: Country code follow by space and 10 digit number");
-            string email = Console.ReadLine();
-            string email_pattern = "^[+]?91[ -][1-9][0-9]{9}$";
+            string mobNum = Console.ReadLine();
+            string mobNum_pattern = "^[+]?91[ -][1-9][0-9]{9}$";
 
-            if (Regex.IsMatch(email, email_pattern))
+            if (Regex.IsMatch(mobNum, mobNum_pattern))
             {
                 Console.WriteLine("Mobie Number is Valid");
             }
