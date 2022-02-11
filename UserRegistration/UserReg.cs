@@ -106,5 +106,27 @@ namespace UserRegistration
                 ValidatePassword();
             }
         }
+
+        public static void ValidateSampleEmails()
+        {
+            
+            string[] emailSamples ={"abc@yahoo.com","abc-100@yahoo.com","abc.100@yahoo.com","abc111@abc.com","abc-100@abc.net","abc.100@abc.com.au","abc@1.com","abc@gmail.com.com","abc+100@gmail.com",  //Valid Emails
+                                   "abc","abc@.com.my","abc123@gmail.a","abc123@.com", "abc123@.com.com",".abc@abc.com","abc()*@gmail.com","abc@%*.com","abc..2002@gmail.com",                            //Invalid Emails
+                                   "abc.@gmail.com","abc@abc@gmail.com","abc@gmail.com.1a", "abc@gmail.com.aa.au"};                                                                                       //Invalid Emails
+
+            string email_pattern = @"^[a-zA-Z0-9]{3,10}([._+-][a-zA-Z0-9]{1,10})?@[a-zA-Z0-9]{1,10}[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3})?$";
+
+            foreach (var email in emailSamples)
+            {
+                if (Regex.IsMatch(email, email_pattern))
+                {
+                    Console.WriteLine(email + "\t\t- Email is Valid");
+                }
+                else
+                {
+                    Console.WriteLine(email + "\t\t- Email is not Valid");
+                }
+            }
+        }
     }
 }
