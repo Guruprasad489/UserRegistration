@@ -85,13 +85,13 @@ namespace UserRegistration
             }
         }
 
-        //UC5, UC6
+        //UC5, UC6, UC7
         public static void ValidatePassword()
         {
             Console.WriteLine("\nPlease Enter your Password:");
             Console.WriteLine("Note: Password must contain min 8 characters");
             string password = Console.ReadLine();
-            string password_pattern = "^(?=.*[a-z])(?=.*[A-Z]).{8,}$";
+            string password_pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$";
 
             if (Regex.IsMatch(password, password_pattern))
             {
