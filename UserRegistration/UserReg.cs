@@ -57,12 +57,31 @@ namespace UserRegistration
 
             if (Regex.IsMatch(email, email_pattern))
             {
-                Console.WriteLine("Email is Valid"); 
+                Console.WriteLine("Email is Valid");
             }
             else
             {
                 Console.WriteLine("Email is not Valid");
                 ValidateEmail();
+            }
+        }
+
+        //UC4
+        public static void ValidateMobileNumber()
+        {
+            Console.WriteLine("\nPlease Enter your Mobie Number:");
+            Console.WriteLine("Note: Country code follow by space and 10 digit number");
+            string email = Console.ReadLine();
+            string email_pattern = "^[+]?91[ -][1-9][0-9]{9}$";
+
+            if (Regex.IsMatch(email, email_pattern))
+            {
+                Console.WriteLine("Mobie Number is Valid");
+            }
+            else
+            {
+                Console.WriteLine("Mobie Number is not Valid");
+                ValidateMobileNumber();
             }
         }
     }

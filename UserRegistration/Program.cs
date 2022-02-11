@@ -13,7 +13,7 @@ namespace UserRegistration
             Console.WriteLine("WElcome to User Registration Program using Regex\n");
 
             Console.WriteLine("Please choose an option");
-            Console.WriteLine("\n1. First Name \n2. Last Name \n3. Email-ID");
+            Console.WriteLine("\n1. First Name \n2. Last Name \n3. Email-ID \n4. Mobile Number");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -25,6 +25,9 @@ namespace UserRegistration
                     break;
                 case 3:
                     UserReg.ValidateEmail();
+                    break;
+                case 4:
+                    UserReg.ValidateMobileNumber();
                     break;
                 default:
                     Console.WriteLine("Please choose a valid option");
