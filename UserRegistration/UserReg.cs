@@ -15,7 +15,7 @@ namespace UserRegistration
             Console.WriteLine("\nPlease Enter your First Name:");
             Console.WriteLine("Note: First name starts with Cap and has minimun 3 characters");
             string firstName = Console.ReadLine();
-            string firstName_pattern = "^[A-Z][aA-zZ]{2,}$";
+            string firstName_pattern = "^[A-Z][a-zA-Z]{2,}$";
 
             if (Regex.IsMatch(firstName, firstName_pattern))
             {
