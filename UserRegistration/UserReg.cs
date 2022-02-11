@@ -85,7 +85,7 @@ namespace UserRegistration
             }
         }
 
-        //UC5
+        //UC5, UC6
         public static void ValidatePassword()
         {
             Console.WriteLine("\nPlease Enter your Password:");
