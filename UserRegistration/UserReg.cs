@@ -71,10 +71,10 @@ namespace UserRegistration
         {
             Console.WriteLine("\nPlease Enter your Mobie Number:");
             Console.WriteLine("Note: Country code follow by space and 10 digit number");
-            string email = Console.ReadLine();
-            string email_pattern = "^[+]?91[ -][1-9][0-9]{9}$";
+            string mobNum = Console.ReadLine();
+            string mobNum_pattern = "^[+]?91[ -][1-9][0-9]{9}$";
 
-            if (Regex.IsMatch(email, email_pattern))
+            if (Regex.IsMatch(mobNum, mobNum_pattern))
             {
                 Console.WriteLine("Mobie Number is Valid");
             }
@@ -82,6 +82,25 @@ namespace UserRegistration
             {
                 Console.WriteLine("Mobie Number is not Valid");
                 ValidateMobileNumber();
+            }
+        }
+
+        //UC5
+        public static void ValidatePassword()
+        {
+            Console.WriteLine("\nPlease Enter your Password:");
+            Console.WriteLine("Note: Password must contain min 8 characters");
+            string password = Console.ReadLine();
+            string password_pattern = "^[a-zA-Z]{8,}$";
+
+            if (Regex.IsMatch(password, password_pattern))
+            {
+                Console.WriteLine("Password is Valid");
+            }
+            else
+            {
+                Console.WriteLine("Password is not Valid");
+                ValidatePassword();
             }
         }
     }
