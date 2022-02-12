@@ -1,0 +1,26 @@
+﻿2022-02-12 22:49:39.6591 INFO Email-ID is Valid: abc.xyz@bl.co.in
+2022-02-12 22:49:54.1761 ERROR Email-ID is not Valid: jgbjkgbjt@
+2022-02-12 22:54:21.5689 INFO Password is Valid: HJKHgjbj@129
+2022-02-12 22:55:15.6721 ERROR Invalid Password: hjjfkhjnfjbjgkbjgkGHJGH45645
+2022-02-12 23:00:10.5845 INFO Email-ID is Valid: abc@yahoo.com
+2022-02-12 23:00:10.7921 INFO Email-ID is Valid: abc-100@yahoo.com
+2022-02-12 23:00:10.8085 INFO Email-ID is Valid: abc.100@yahoo.com
+2022-02-12 23:00:10.8085 INFO Email-ID is Valid: abc111@abc.com
+2022-02-12 23:00:10.8500 INFO Email-ID is Valid: abc-100@abc.net
+2022-02-12 23:00:10.8500 INFO Email-ID is Valid: abc.100@abc.com.au
+2022-02-12 23:00:10.8500 INFO Email-ID is Valid: abc@1.com
+2022-02-12 23:00:10.8500 INFO Email-ID is Valid: abc@gmail.com.com
+2022-02-12 23:00:10.8888 INFO Email-ID is Valid: abc+100@gmail.com
+2022-02-12 23:00:10.8888 ERROR Email-ID is not Valid: abc
+2022-02-12 23:00:10.8888 ERROR Email-ID is not Valid: abc@.com.my
+2022-02-12 23:00:10.9500 ERROR Email-ID is not Valid: abc123@gmail.a
+2022-02-12 23:00:10.9949 ERROR Email-ID is not Valid: abc123@.com
+2022-02-12 23:00:10.9949 ERROR Email-ID is not Valid: abc123@.com.com
+2022-02-12 23:00:10.9949 ERROR Email-ID is not Valid: .abc@abc.com
+2022-02-12 23:00:10.9949 ERROR Email-ID is not Valid: abc()*@gmail.com
+2022-02-12 23:00:10.9989 ERROR Email-ID is not Valid: abc@%*.com
+2022-02-12 23:00:10.9989 ERROR Email-ID is not Valid: abc..2002@gmail.com
+2022-02-12 23:00:10.9989 ERROR Email-ID is not Valid: abc.@gmail.com
+2022-02-12 23:00:10.9989 ERROR Email-ID is not Valid: abc@abc@gmail.com
+2022-02-12 23:00:10.9989 ERROR Email-ID is not Valid: abc@gmail.com.1a
+2022-02-12 23:00:10.9989 ERROR Email-ID is not Valid: abc@gmail.com.aa.au

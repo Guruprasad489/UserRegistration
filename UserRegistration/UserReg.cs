@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace UserRegistration
 {
     public class UserReg
     {
-        //UC1
+        //UC1 - Method to Validate First Name entered by user
         public static void ValidateFirstName()
         {
             Console.WriteLine("\nPlease Enter your First Name:");
@@ -28,7 +29,7 @@ namespace UserRegistration
             }
         }
 
-        //UC2
+        //UC2 - Method to Validate Last Name entered by user
         public static void ValidateLastName()
         {
             Console.WriteLine("\nPlease Enter your Last Name:");
@@ -47,7 +48,7 @@ namespace UserRegistration
             }
         }
 
-        //UC3
+        //UC3 - Method to Validate Email-ID entered by user
         public static void ValidateEmail()
         {
             Console.WriteLine("\nPlease Enter your Email-ID:");
@@ -58,15 +59,17 @@ namespace UserRegistration
             if (Regex.IsMatch(email, email_pattern))
             {
                 Console.WriteLine("Email is Valid");
+                NLog.SuccessInfo("Email-ID is Valid: "+ email);
             }
             else
             {
                 Console.WriteLine("Email is not Valid");
+                NLog.ErrorInfo("Email-ID is not Valid: " + email);
                 ValidateEmail();
             }
         }
 
-        //UC4
+        //UC4 - Method to Validate Mobile Number entered by user
         public static void ValidateMobileNumber()
         {
             Console.WriteLine("\nPlease Enter your Mobie Number:");
@@ -85,47 +88,27 @@ namespace UserRegistration
             }
         }
 
-        //UC5, UC6, UC7, UC8
+        //UC5, UC6, UC7, UC8  - Method to Validate Password entered by user
         public static void ValidatePassword()
         {
             Console.WriteLine("\nPlease Enter your Password:");
-            Console.WriteLine("Note: Password must contain min 8 characters");
+            Console.WriteLine("Note: Password must contain min 8 characters, atleast 1 Upper Case, atleast 1 numeric number and 1 special character");
             string password = Console.ReadLine();
-            //string password_Pattern = "^[a-zA-Z]{8,}$";                                            //UC5
-            //string password_pattern = "^(?=.*[a-z])(?=.*[A-Z]).{8,}$";                             //UC6
-            //string password_Pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$";                  //UC7
-            string password_Pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[&%$#@?^*!~]).{8,}$";  //UC8
+            //string password_Pattern = "^[a-zA-Z]{8,}$";                                               //UC5: Password must contain min 8 characters
+            //string password_pattern = "^(?=.*[a-z])(?=.*[A-Z]).{8,}$";                                //UC6: UC5 + atleast 1 Upper Case
+            //string password_Pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$";                     //UC7: UC6 + atleast 1 numeric number
+            string password_Pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[&%$#@?^*!~]).{8,}$";     //UC8: UC7 + 1 special character
 
             if (Regex.IsMatch(password, password_Pattern))
             {
                 Console.WriteLine("Password is Valid");
+                NLog.SuccessInfo("Password is Valid: " + password);
             }
             else
             {
                 Console.WriteLine("Password is not Valid");
+                NLog.ErrorInfo("Invalid Password: " + password);
                 ValidatePassword();
-            }
-        }
-
-        public static void ValidateSampleEmails()
-        {
-            
-            string[] emailSamples ={"abc@yahoo.com","abc-100@yahoo.com","abc.100@yahoo.com","abc111@abc.com","abc-100@abc.net","abc.100@abc.com.au","abc@1.com","abc@gmail.com.com","abc+100@gmail.com",  //Valid Emails
-                                   "abc","abc@.com.my","abc123@gmail.a","abc123@.com", "abc123@.com.com",".abc@abc.com","abc()*@gmail.com","abc@%*.com","abc..2002@gmail.com",                            //Invalid Emails
-                                   "abc.@gmail.com","abc@abc@gmail.com","abc@gmail.com.1a", "abc@gmail.com.aa.au"};                                                                                       //Invalid Emails
-
-            string email_pattern = @"^[a-zA-Z0-9]{3,10}([._+-][a-zA-Z0-9]{1,10})?@[a-zA-Z0-9]{1,10}[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3})?$";
-
-            foreach (var email in emailSamples)
-            {
-                if (Regex.IsMatch(email, email_pattern))
-                {
-                    Console.WriteLine(email + "\t\t- Email is Valid");
-                }
-                else
-                {
-                    Console.WriteLine(email + "\t\t- Email is not Valid");
-                }
             }
         }
     }
