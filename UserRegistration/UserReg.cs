@@ -11,89 +11,75 @@ namespace UserRegistration
     public class UserReg
     {
         //UC1 - Method to Validate First Name entered by user
-        public static void ValidateFirstName()
+        public static string ValidateFirstName(string firstName)
         {
-            Console.WriteLine("\nPlease Enter your First Name:");
-            Console.WriteLine("Note: First name starts with Cap and has minimun 3 characters");
-            string firstName = Console.ReadLine();
             string firstName_pattern = "^[A-Z][a-zA-Z]{2,}$";
 
             if (Regex.IsMatch(firstName, firstName_pattern))
             {
                 Console.WriteLine("First Name is Valid");
+                return firstName;
             }
             else
             {
-                Console.WriteLine("First Name is not Valid");
-                ValidateFirstName();
+                return "First Name is not Valid";
             }
         }
 
         //UC2 - Method to Validate Last Name entered by user
-        public static void ValidateLastName()
+        public static string ValidateLastName(string lastName)
         {
-            Console.WriteLine("\nPlease Enter your Last Name:");
-            Console.WriteLine("Note: Last name starts with Cap and has minimun 3 characters");
-            string lastName = Console.ReadLine();
             string lastName_pattern = "^[A-Z][a-zA-Z]{2,}$";
 
             if (Regex.IsMatch(lastName, lastName_pattern))
             {
                 Console.WriteLine("Last Name is Valid");
+                return lastName;
             }
             else
             {
-                Console.WriteLine("Last Name is not Valid");
-                ValidateLastName();
+                return "Last Name is not Valid";
             }
         }
 
         //UC3 - Method to Validate Email-ID entered by user
-        public static void ValidateEmail()
+        public static string ValidateEmail(string email)
         {
-            Console.WriteLine("\nPlease Enter your Email-ID:");
-            Console.WriteLine("Note: E.g. abc.xyz@bl.co.in - Email has 3 mandatory parts (abc, bl & co) and 2 optional (xyz & in) with precise @ and . positions");
-            string email = Console.ReadLine();
             string email_pattern = @"^[a-zA-Z0-9]{3,10}([._+-][a-zA-Z0-9]{1,10})?@[a-zA-Z0-9]{1,10}[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3})?$";
 
             if (Regex.IsMatch(email, email_pattern))
             {
                 Console.WriteLine("Email is Valid");
                 NLog.SuccessInfo("Email-ID is Valid: "+ email);
+                return email;
             }
             else
             {
-                Console.WriteLine("Email is not Valid");
                 NLog.ErrorInfo("Email-ID is not Valid: " + email);
-                ValidateEmail();
+                return "Email is not Valid";
             }
         }
 
         //UC4 - Method to Validate Mobile Number entered by user
-        public static void ValidateMobileNumber()
+        public static string ValidateMobileNumber(string mobNum)
         {
-            Console.WriteLine("\nPlease Enter your Mobie Number:");
-            Console.WriteLine("Note: Country code follow by space and 10 digit number");
-            string mobNum = Console.ReadLine();
             string mobNum_pattern = "^[+]?91[ -][1-9][0-9]{9}$";
 
             if (Regex.IsMatch(mobNum, mobNum_pattern))
             {
                 Console.WriteLine("Mobie Number is Valid");
+                return mobNum;
             }
             else
             {
-                Console.WriteLine("Mobie Number is not Valid");
-                ValidateMobileNumber();
+                return "Mobie Number is not Valid";
+                
             }
         }
 
         //UC5, UC6, UC7, UC8  - Method to Validate Password entered by user
-        public static void ValidatePassword()
+        public static string ValidatePassword(string password)
         {
-            Console.WriteLine("\nPlease Enter your Password:");
-            Console.WriteLine("Note: Password must contain min 8 characters, atleast 1 Upper Case, atleast 1 numeric number and 1 special character");
-            string password = Console.ReadLine();
             //string password_Pattern = "^[a-zA-Z]{8,}$";                                               //UC5: Password must contain min 8 characters
             //string password_pattern = "^(?=.*[a-z])(?=.*[A-Z]).{8,}$";                                //UC6: UC5 + atleast 1 Upper Case
             //string password_Pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$";                     //UC7: UC6 + atleast 1 numeric number
@@ -103,12 +89,12 @@ namespace UserRegistration
             {
                 Console.WriteLine("Password is Valid");
                 NLog.SuccessInfo("Password is Valid: " + password);
+                return password;
             }
             else
             {
-                Console.WriteLine("Password is not Valid");
                 NLog.ErrorInfo("Invalid Password: " + password);
-                ValidatePassword();
+                return "Password is not Valid";
             }
         }
     }
