@@ -360,3 +360,34 @@
 2022-02-13 18:34:40.4551 ERROR Invalid Password: GHJGHjghjfgj
 2022-02-13 18:34:40.4551 ERROR Invalid Password: hgfgh#123554
 2022-02-13 18:34:40.4551 ERROR Invalid Password: HGgf@#1
+2022-02-20 11:57:54.8810 INFO Email-ID is Valid: abc.xyz@bi.co.ib
+2022-02-20 11:58:55.0817 INFO Password is Valid: @Nagu2225
+2022-02-20 12:07:28.5294 INFO Email-ID is Valid: abc@gmail.com
+2022-02-20 12:07:28.8168 INFO Email-ID is Valid: abc-100@yahoo.com
+2022-02-20 12:07:28.8168 INFO Email-ID is Valid: abc.100@yahoo.com
+2022-02-20 12:07:28.8168 INFO Email-ID is Valid: abc111@yahoo.com
+2022-02-20 12:07:28.8308 INFO Email-ID is Valid: abc111@abc.com
+2022-02-20 12:07:28.8308 INFO Email-ID is Valid: abc-100@abc.net
+2022-02-20 12:07:28.8308 INFO Email-ID is Valid: abc.100@abc.com.au
+2022-02-20 12:07:28.8308 INFO Email-ID is Valid: abc@1.com
+2022-02-20 12:07:28.8308 INFO Email-ID is Valid: abc@gmail.com.com
+2022-02-20 12:07:28.8308 INFO Email-ID is Valid: abc+100@gmail.com
+2022-02-20 12:07:28.8498 ERROR Email-ID is not Valid: abc
+2022-02-20 12:07:28.8498 ERROR Email-ID is not Valid: abc@.com.my
+2022-02-20 12:07:28.8498 ERROR Email-ID is not Valid: abc123@.com
+2022-02-20 12:07:28.8498 ERROR Email-ID is not Valid: abc123@.com.com
+2022-02-20 12:07:28.8648 ERROR Email-ID is not Valid: abc()*@gmail.com
+2022-02-20 12:07:28.8648 ERROR Email-ID is not Valid: .abc@abc.com
+2022-02-20 12:07:28.8648 ERROR Email-ID is not Valid: abc@%*.com
+2022-02-20 12:07:28.8648 ERROR Email-ID is not Valid: abc..2002@gmail.com
+2022-02-20 12:07:28.8648 ERROR Email-ID is not Valid: abc.@gmail.com
+2022-02-20 12:07:28.8798 ERROR Email-ID is not Valid: abc@abc@gmail.com
+2022-02-20 12:07:28.8798 ERROR Email-ID is not Valid: abc@gmail.com.1a
+2022-02-20 12:07:28.8798 ERROR Email-ID is not Valid: abc@gmail.com.aa.au
+2022-02-20 12:07:28.8998 INFO Password is Valid: Abcd@1234
+2022-02-20 12:07:28.8998 INFO Password is Valid: hjGHJv12#
+2022-02-20 12:07:28.8998 INFO Password is Valid: ?hjghjGHJGHgj21345GH
+2022-02-20 12:07:28.8998 ERROR Invalid Password: GHJKFGJFYJ
+2022-02-20 12:07:28.9277 ERROR Invalid Password: GHJGHjghjfgj
+2022-02-20 12:07:28.9277 ERROR Invalid Password: hgfgh#123554
+2022-02-20 12:07:28.9277 ERROR Invalid Password: HGgf@#1

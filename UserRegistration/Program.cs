@@ -11,9 +11,10 @@ namespace UserRegistration
         static void Main(string[] args)
         {
             Console.WriteLine("WElcome to User Registration Program using Regex\n");
-            try
+
+            while (true)
             {
-                while (true)
+                try
                 {
                     Console.WriteLine("Please choose an option to Validate:");
                     Console.WriteLine("\n1. First Name \n2. Last Name \n3. Email-ID \n4. Mobile Number \n5. Password \n6. Exit");
@@ -57,17 +58,16 @@ namespace UserRegistration
                             Console.WriteLine("Please choose a valid option");
                             break;
                     }
-                    Console.ReadLine();
                 }
-            }
-            catch (NullReferenceException e)
-            {
+                catch (NullReferenceException e)
+                {
 
-                Console.WriteLine(e.Message);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
+                    Console.WriteLine(e.Message);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
         }
     }
